@@ -2,7 +2,7 @@
 version: 2.1
 
 Jobs:
-  print_hello:
+  my_job:
     docker:
       - image: circleci/node:13.8.0
     steps: 
@@ -13,7 +13,7 @@ Jobs:
           when: on_fail
     
 workflows:
-  welcome:
+  my_workflow:
     jobs:
-      - print_hello
+      - my_job
 
